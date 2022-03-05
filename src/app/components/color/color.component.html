@@ -1,0 +1,12 @@
+<table class="list-group-item container">
+    <td [class]="getAllColorClass()"
+    routerLink="/colors">Tüm Renkler</td>
+    <tr
+         [class]="getCurrentColor(color)"
+    (click)="setCurrentColor(color)"
+    routerLink="/cars/color/{{color.colorId}}"
+     *ngFor="let color of colors">
+        <td>{{color.colorName}}</td>
+        
+    </tr>
+</table>
